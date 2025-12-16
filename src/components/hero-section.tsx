@@ -711,7 +711,7 @@ export default function HeroSection() {
               </Button>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: preloaderFinished ? 2 : 4.5 }}
@@ -751,7 +751,7 @@ export default function HeroSection() {
                 <div className="text-xs md:text-sm text-white/80">Success</div>
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Right Image with scroll effect */}
           <motion.div

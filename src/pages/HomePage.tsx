@@ -1,10 +1,10 @@
-import HeroSection from "@/components/hero-section"
-import AboutSection from "@/components/about-section"
-import VidyajeevanSection from "@/components/vidyajeevan-section"
-import HorizontalAccordionSection from "@/components/horizontal-accordion-section"
-import RoadmapSection from "@/components/roadmap-section"
-import ReviewsSection from "@/components/reviews-section"
-import Footer from "@/components/footer"
+import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
+import VidyajeevanSection from "@/components/vidyajeevan-section";
+import HorizontalAccordionSection from "@/components/horizontal-accordion-section";
+import RoadmapSection from "@/components/roadmap-section";
+import ReviewsSection from "@/components/reviews-section";
+import Footer from "@/components/footer";
 
 const mentorshipApproach = [
   {
@@ -39,7 +39,7 @@ const mentorshipApproach = [
       "Learn practical skills that matter in the real world. Our curriculum is designed in collaboration with industry experts to ensure market relevance.",
     icon: "💼",
   },
-]
+];
 
 const successStories = [
   {
@@ -74,7 +74,7 @@ const successStories = [
       "The mentorship doesn't end with placement. Our alumni continue to grow and achieve new milestones throughout their professional journeys.",
     icon: "🎓",
   },
-]
+];
 
 export default function HomePage() {
   return (
@@ -82,11 +82,17 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <VidyajeevanSection />
-      <HorizontalAccordionSection items={mentorshipApproach} title="Our Mentorship Approach" />
+      <HorizontalAccordionSection
+        items={mentorshipApproach}
+        title="Our Mentorship Approach"
+      />
       <RoadmapSection />
+      <HorizontalAccordionSection
+        items={successStories}
+        title="Success Stories & Impact"
+      />
       <ReviewsSection />
-      <HorizontalAccordionSection items={successStories} title="Success Stories & Impact" />
       <Footer />
     </>
-  )
+  );
 }
