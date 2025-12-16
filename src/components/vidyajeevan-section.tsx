@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Users, Target, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import CounterAnimation from "./counter-animation";
+// import CounterAnimation from "./counter-animation";
 import TypingText from "./typing-text";
 
 const features = [
