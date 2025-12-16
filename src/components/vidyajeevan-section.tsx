@@ -1,41 +1,43 @@
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { BookOpen, Users, Target, Award, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { BookOpen, Users, Target, Award, ArrowRight } from "lucide-react"
-import { Link } from "react-router-dom"
-
-import CounterAnimation from "./counter-animation"
-import TypingText from "./typing-text"
+import CounterAnimation from "./counter-animation";
+import TypingText from "./typing-text";
 
 const features = [
   {
     icon: BookOpen,
     title: "Industry-Relevant Curriculum",
-    description: "Comprehensive, updated curriculum aligned with modern educational standards.",
+    description:
+      "Comprehensive, updated curriculum aligned with modern educational standards.",
   },
   {
     icon: Users,
     title: "Personalized Mentorship",
-    description: "One-on-one guidance tailored to your unique learning style and aspirations.",
+    description:
+      "One-on-one guidance tailored to your unique learning style and aspirations.",
   },
   {
     icon: Target,
     title: "Goal-Oriented Support",
-    description: "Career guidance and strategic planning to achieve your academic objectives.",
+    description:
+      "Career guidance and strategic planning to achieve your academic objectives.",
   },
   {
     icon: Award,
     title: "Lifetime Placement",
     description: "Continuous guidance even after achieving your initial goals.",
   },
-]
+];
 
 const stats = [
   { label: "Students Placed", value: "4,500+" },
   { label: "Hiring Partners", value: "800+" },
   { label: "Highest Salary", value: "50 LPA" },
   { label: "Expert Mentors", value: "1,200+" },
-]
+];
 
 export default function VidyajeevanSection() {
   return (
@@ -56,7 +58,9 @@ export default function VidyajeevanSection() {
             viewport={{ once: true }}
             className="inline-block px-4 md:px-6 py-1.5 md:py-2 bg-accent/10 rounded-full border border-accent/20 mb-4 md:mb-6"
           >
-            <span className="text-accent font-semibold text-xs md:text-sm tracking-wide">OUR VISION</span>
+            <span className="text-accent font-semibold text-xs md:text-sm tracking-wide">
+              OUR VISION
+            </span>
           </motion.div>
 
           <motion.h2
@@ -98,11 +102,14 @@ export default function VidyajeevanSection() {
 
             <div className="space-y-4 md:space-y-6">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
-                Our goal is to prepare you for success in your educational career.
+                Our goal is to prepare you for success in your educational
+                career.
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-foreground/70 leading-relaxed">
-                Vidyajeevan is an institutional framework designed by Dr. Ravi Sharma to transform students' educational
-                journey through structured mentorship, innovative learning methods, and comprehensive career guidance.
+                Vidyajeevan is an institutional framework designed by Dr. Ravi
+                Sharma to transform students' educational journey through
+                structured mentorship, innovative learning methods, and
+                comprehensive career guidance.
               </p>
               <Button
                 asChild
@@ -121,7 +128,7 @@ export default function VidyajeevanSection() {
         {/* Feature Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20">
           {features.map((feature, index) => {
-            const Icon = feature.icon
+            const Icon = feature.icon;
 
             return (
               <motion.div
@@ -139,15 +146,19 @@ export default function VidyajeevanSection() {
                   </div>
                 </div>
 
-                <h3 className="text-base md:text-xl font-bold text-foreground mb-2 md:mb-3">{feature.title}</h3>
-                <p className="text-foreground/70 leading-relaxed text-xs md:text-sm">{feature.description}</p>
+                <h3 className="text-base md:text-xl font-bold text-foreground mb-2 md:mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-foreground/70 leading-relaxed text-xs md:text-sm">
+                  {feature.description}
+                </p>
               </motion.div>
-            )
+            );
           })}
         </div>
 
         {/* Results Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -184,8 +195,8 @@ export default function VidyajeevanSection() {
               <div className="text-xs sm:text-sm md:text-base text-foreground/60">{stat.label}</div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
-  )
+  );
 }
