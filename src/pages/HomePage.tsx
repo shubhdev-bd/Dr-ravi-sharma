@@ -83,11 +83,13 @@ export default function HomePage() {
       <AboutSection />
       <VidyajeevanSection />
       <HorizontalAccordionSection
+        youtubeId="TzcOn93fvVM"
         items={mentorshipApproach}
         title="Our Mentorship Approach"
       />
       <RoadmapSection />
       <HorizontalAccordionSection
+        youtubeId="TzcOn93fvVM"
         items={successStories}
         title="Success Stories & Impact"
       />

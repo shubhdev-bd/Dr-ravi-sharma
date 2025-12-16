@@ -540,7 +540,7 @@ export default function HeroSection() {
             minWidth: "177.77vh", // 16:9 aspect ratio
             transform: "translate(-50%, -50%)",
           }}
-          src="https://www.youtube.com/embed/RT_MRoew6fA?autoplay=1&mute=1&loop=1&playlist=RT_MRoew6fA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+          src="https://www.youtube.com/embed/I1qPYBsKllg?autoplay=1&mute=1&loop=1&playlist=I1qPYBsKllg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
           title="Background Video"
           frameBorder="0"
           allow="autoplay; encrypted-media"
