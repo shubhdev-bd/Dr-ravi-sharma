@@ -32,12 +32,12 @@ const features = [
   },
 ];
 
-const stats = [
-  { label: "Students Placed", value: "4,500+" },
-  { label: "Hiring Partners", value: "800+" },
-  { label: "Highest Salary", value: "50 LPA" },
-  { label: "Expert Mentors", value: "1,200+" },
-];
+// const stats = [
+//   { label: "Students Placed", value: "4,500+" },
+//   { label: "Hiring Partners", value: "800+" },
+//   { label: "Highest Salary", value: "50 LPA" },
+//   { label: "Expert Mentors", value: "1,200+" },
+// ];
 
 export default function VidyajeevanSection() {
   return (
