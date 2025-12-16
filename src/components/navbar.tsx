@@ -1,39 +1,41 @@
-import { useState, useEffect } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const location = useLocation()
-  const pathname = location.pathname
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    setIsMobileMenuOpen(false)
-  }, [pathname])
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/vidyajeevan", label: "Vidyajeevan" },
-    { href: "/reviews", label: "Reviews" },
+    { href: "/reviews", label: "Student Testimonials" },
     { href: "/about", label: "About" },
-  ]
+  ];
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+          isScrolled
+            ? "bg-background/95 backdrop-blur-md shadow-md"
+            : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4 py-4">
@@ -53,14 +55,18 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`text-sm lg:text-base transition-colors font-medium relative group ${
-                    pathname === link.href ? "text-accent" : "text-foreground hover:text-accent"
+                  className={`text-sm lg:text-base  transition-colors font-medium relative group ${
+                    pathname === link.href
+                      ? "text-black font-bold"
+                      : "text-foreground hover:text-accent"
                   }`}
                 >
                   {link.label}
                   <span
                     className={`absolute -bottom-1 left-0 w-full h-0.5 bg-accent transition-transform origin-left ${
-                      pathname === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      pathname === link.href
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
                     }`}
                   />
                 </Link>
@@ -73,7 +79,11 @@ export default function Navbar() {
               className="md:hidden z-50 relative"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -107,7 +117,9 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     className={`text-3xl font-bold transition-colors ${
-                      pathname === link.href ? "text-accent" : "text-foreground hover:text-accent"
+                      pathname === link.href
+                        ? "text-accent"
+                        : "text-foreground hover:text-accent"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -120,5 +132,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
