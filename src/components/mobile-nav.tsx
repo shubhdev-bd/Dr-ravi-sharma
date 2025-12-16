@@ -1,19 +1,19 @@
-import { useLocation, Link } from "react-router-dom"
-import { Home, BookOpen, Star, User } from "lucide-react"
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { useLocation, Link } from "react-router-dom";
+import { Home, BookOpen, Star, User } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function MobileNav() {
-  const location = useLocation()
-  const pathname = location.pathname
-  const [activeItem, setActiveItem] = useState<string | null>(null)
+  const location = useLocation();
+  const pathname = location.pathname;
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
   const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/vidyajeevan", label: "Vidyajeevan", icon: BookOpen },
-    { href: "/reviews", label: "Reviews", icon: Star },
+    { href: "/reviews", label: "Testimonials", icon: Star },
     { href: "/about", label: "About", icon: User },
-  ]
+  ];
 
   return (
     <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-40 px-4 w-full max-w-sm">
@@ -25,9 +25,9 @@ export default function MobileNav() {
       >
         <div className="flex items-center justify-around gap-1">
           {navItems.map((item) => {
-            const Icon = item.icon
-            const isActive = pathname === item.href
-            const isExpanded = activeItem === item.href
+            const Icon = item.icon;
+            const isActive = pathname === item.href;
+            const isExpanded = activeItem === item.href;
 
             return (
               <Link
@@ -43,7 +43,9 @@ export default function MobileNav() {
                   }}
                   transition={{ duration: 0.3 }}
                   className={`flex items-center gap-2 px-3 py-2 rounded-full transition-all ${
-                    isActive ? "bg-accent text-white" : "text-white/70 hover:text-white"
+                    isActive
+                      ? "bg-accent text-white"
+                      : "text-white/70 hover:text-white"
                   }`}
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
@@ -60,10 +62,10 @@ export default function MobileNav() {
                   </motion.span>
                 </motion.div>
               </Link>
-            )
+            );
           })}
         </div>
       </motion.div>
     </div>
-  )
+  );
 }
