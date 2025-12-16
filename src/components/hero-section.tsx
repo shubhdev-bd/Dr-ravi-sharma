@@ -974,9 +974,9 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Space divider for mobile */}
-          <div className="lg:hidden h-[400px] sm:h-[500px] md:h-[600px] flex items-end justify-center">
+          {/* <div className="lg:hidden h-[400px] sm:h-[500px] md:h-[600px] flex items-end justify-center">
             <div className="w-px h-24 bg-gray-400/40"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
