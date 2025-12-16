@@ -759,7 +759,8 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: preloaderFinished ? 0.3 : 2.8 }}
-            className="relative order-first lg:order-last"
+            // className="relative order-first lg:order-last"
+            className="hidden lg:block"
           >
             <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
               {/* Decorative Elements */}
@@ -798,6 +799,12 @@ export default function HeroSection() {
               </motion.div>
             </div>
           </motion.div>
+          {/* Space divider for mobile — replaces image height */}
+          <div className="lg:hidden h-[400px] sm:h-[500px] md:h-[600px] flex items-end justify-center">
+            {/* Optional: add subtle visual cue (e.g., dotted line or icon) */}
+            {/* Example: */}
+            <div className="w-px h-24 bg-white/20"></div>
+          </div>
         </div>
       </div>
     </section>
