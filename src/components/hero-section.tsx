@@ -487,7 +487,7 @@ import { Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import TypingText from "./typing-text";
 import CyclingTypingText from "./cycling-typing-text";
-import CounterAnimation from "./counter-animation";
+// import CounterAnimation from "./counter-animation";
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
