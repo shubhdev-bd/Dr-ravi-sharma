@@ -750,8 +750,8 @@ export default function HeroSection() {
                 )}
                 <div className="text-xs md:text-sm text-white/80">Success</div>
               </div>
-            </motion.div>
-          </motion.div> */}
+            </motion.div> */}
+          </motion.div>
 
           {/* Right Image with scroll effect */}
           <motion.div
