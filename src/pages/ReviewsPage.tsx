@@ -122,9 +122,9 @@ export default function ReviewsPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]">
               Student Testimonials
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800 font-medium drop-shadow-[0_1px_4px_rgba(255,255,255,0.9)]">
+            {/* <p className="text-xl md:text-2xl text-gray-800 font-medium drop-shadow-[0_1px_4px_rgba(255,255,255,0.9)]">
               Success Stories from Our Mentorship Program
-            </p>
+            </p> */}
           </div>
         </div>
       
