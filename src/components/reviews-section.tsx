@@ -123,7 +123,15 @@ import React from "react"
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 
-const reviews = [
+interface Review {
+  name: string
+  role: string
+  image: string
+  rating: number
+  review: string
+}
+
+const reviews: Review[] = [
   {
     name: "Priya Sharma",
     role: "IIT Delhi Graduate",
@@ -169,16 +177,16 @@ const reviews = [
 ]
 
 // Create three columns of reviews
-const reviewColumns = [
+const reviewColumns: Review[][] = [
   [reviews[0], reviews[1], reviews[2]],
   [reviews[3], reviews[4], reviews[0]],
   [reviews[5], reviews[1], reviews[3]],
 ]
 
-export default function ReviewsSection() {
+const ReviewsSection: React.FC = () => {
   return (
     <section className="relative py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
-      <style jsx>{`
+      <style>{`
         @keyframes slideUp {
           0% {
             transform: translateY(0);
@@ -356,3 +364,5 @@ export default function ReviewsSection() {
     </section>
   )
 }
+
+export default ReviewsSection
