@@ -9,11 +9,28 @@ export default function ReviewsPage() {
 
   return (
     <>
-      <div className="pt-24 pb-12 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">Student Testimonials</h1>
-          <p className="text-xl opacity-90">Success Stories from Our Mentorship Program</p>
-        </div>
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+         {/* Hero Section with YouTube Video */}
+        <div className="relative w-full h-[60vh] min-h-[400px] bg-black">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=1&loop=1&playlist=dQw4w9WgXcQ"
+            title="Student Success Stories"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+            <div className="container mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                Student Testimonials
+              </h1>
+              <p className="text-xl text-gray-200">
+                Success Stories from Our Mentorship Program
+              </p>
+            </div>
+          </div>
+          </div>
       </div>
       <ReviewsSection />
       <Footer />
