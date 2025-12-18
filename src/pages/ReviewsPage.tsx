@@ -11,10 +11,10 @@ export default function ReviewsPage() {
     <>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
          {/* Hero Section with YouTube Video */}
-        <div className="relative w-full h-[60vh] min-h-[400px] bg-black">
+        <div className="relative min-h-screen bg-black">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=1&loop=1&playlist=dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/TzcOn93fvVM?autoplay=1&mute=1&controls=1&loop=1&playlist=TzcOn93fvVM"
             title="Student Success Stories"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
