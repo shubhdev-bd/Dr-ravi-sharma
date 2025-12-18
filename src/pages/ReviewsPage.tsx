@@ -79,7 +79,7 @@ export default function ReviewsPage() {
     <>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section with YouTube Video Background */}
-        <div className="relative w-full h-[60vh] min-h-[500px] overflow-hidden bg-gray-900">
+        <div className="relative w-full h-full min-h-screen overflow-hidden bg-gray-900">
           {/* Video Background */}
           <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
             <iframe
