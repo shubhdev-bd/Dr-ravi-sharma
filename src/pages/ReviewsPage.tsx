@@ -77,58 +77,60 @@ export default function ReviewsPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white"> */}
         {/* Hero Section with YouTube Video Background */}
-        <div className="relative w-full h-full min-h-screen overflow-hidden bg-gray-900">
-          {/* Video Background */}
-          <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-            <iframe
-              className="absolute top-1/2 left-1/2 pointer-events-none"
-              style={{
-                width: "100vw",
-                height: "56.25vw",
-                minHeight: "100vh",
-                minWidth: "177.77vh",
-                transform: "translate(-50%, -50%)",
-              }}
-              src="https://www.youtube.com/embed/TzcOn93fvVM?autoplay=1&mute=1&loop=1&playlist=TzcOn93fvVM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3"
-              title="Background Video"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-            />
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
+          <iframe
+            className="absolute top-1/2 left-1/2 pointer-events-none"
+            style={{
+              width: "100vw",
+              height: "56.25vw",
+              minHeight: "100vh",
+              minWidth: "177.77vh",
+              transform: "translate(-50%, -50%)",
+            }}
+            src="https://www.youtube.com/embed/TzcOn93fvVM?autoplay=1&mute=1&loop=1&playlist=TzcOn93fvVM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3"
+            title="Background Video"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-white/40 z-10" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-white/40" />
 
-            {/* Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 z-10" />
-          </div>
+          {/* Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10" />
+        </div>
 
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-3 z-20">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgb(14, 107, 168) 1px, transparent 0)`,
-                backgroundSize: "40px 40px",
-              }}
-            />
-          </div>
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-3 z-[1]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgb(14, 107, 168) 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
 
-          {/* Hero Content */}
-          <div className="relative z-30 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+        {/* Hero Content */}
+        <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+          <div className="flex flex-col justify-center items-center text-center min-h-[60vh]">
+            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]">
               Student Testimonials
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800">
+            <p className="text-xl md:text-2xl text-gray-800 font-medium drop-shadow-[0_1px_4px_rgba(255,255,255,0.9)]">
               Success Stories from Our Mentorship Program
             </p>
           </div>
         </div>
-      </div>
+      
       <ReviewsSection />
       <Footer />
+      </section>
     </>
   )
 }
