@@ -77,9 +77,9 @@ export default function ReviewsPage() {
 
   return (
     <>
-      {/* <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white"> */}
+      {/* <div className="relative min-h-screen flex items-center overflow-hidden pt-16"> */}
         {/* Hero Section with YouTube Video Background */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
+      
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
           <iframe
@@ -130,7 +130,7 @@ export default function ReviewsPage() {
       
       <ReviewsSection />
       <Footer />
-      </section>
+      
     </>
   )
 }
